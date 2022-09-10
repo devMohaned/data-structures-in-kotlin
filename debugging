@@ -1,0 +1,437 @@
+My Debugging Code
+
+   // Array List
+        // Array List
+        // Array List
+        // Array List
+        // Array List
+        // Array List
+        // Array List
+        val list: ArrayList<String> = ArrayList()
+        Log.d("ArrayList DS:", "Size: " + list.size())
+        Log.d("ArrayList DS:", "isEmpty: " + list.isEmpty())
+        Log.d("ArrayList DS:", "Index Of D: " + list.indexOf("D"))
+
+        list.add("A")
+        list.add("B")
+        list.add("C")
+        list.add("D")
+        list.add("E")
+        Log.d("ArrayList DS:", "Size: " + list.size())
+
+        Log.d("ArrayList DS:", "Element at Index 0 Should be A: " + list.get(0))
+        list.remove("A")
+        Log.d("ArrayList DS:", "Element at Index 0 Should be B after removal of A: " + list.get(0))
+        Log.d("ArrayList DS:", "Size: " + list.size())
+
+        list.set(0, "Z")
+        Log.d("ArrayList DS:", "Element at Index 0 Should be Z: " + list.get(0))
+        Log.d("ArrayList DS:", "Size: " + list.size())
+        list.removeAt(1)
+        Log.d("ArrayList DS:", "After Removal of element at Index 1 Size: " + list.size())
+
+        Log.d("ArrayList DS:", "Index Of D: " + list.indexOf("D"))
+
+        list.clear()
+        Log.d("ArrayList DS:", "Should be Empty Size: " + list.size())
+        Log.d("ArrayList DS:", "Should be Empty Size: " + list.isEmpty())
+
+
+        // Single Linked List
+        // Single Linked List
+        // Single Linked List
+        // Single Linked List
+        // Single Linked List
+        // Single Linked List
+        // Single Linked List
+        val singleLinkedList: SingleLinkedList<String> = SingleLinkedList()
+        Log.d("SinglyLinkedList DS", "Should be Empty Size: " + singleLinkedList.size())
+        Log.d("SinglyLinkedList DS", "Should be Empty isEmpty: " + singleLinkedList.isEmpty())
+        singleLinkedList.add("A")
+        singleLinkedList.add("B")
+        singleLinkedList.add("C")
+        singleLinkedList.add("D")
+        singleLinkedList.add("E")
+        singleLinkedList.add("F")
+        Log.d("SinglyLinkedList DS", "Should be 6 Size: " + singleLinkedList.size())
+        Log.d("SinglyLinkedList DS", "Should be NOT EMPTY isEmpty: " + singleLinkedList.isEmpty())
+
+
+        Log.d("SinglyLinkedList DS", "ZZZ DOES NOT CONTAIN IN: " + singleLinkedList.contains("ZZZ"))
+
+        singleLinkedList.addFirst("AAA")
+        Log.d("SinglyLinkedList DS", "Should be 7 Size: " + singleLinkedList.size())
+        singleLinkedList.addLast("ZZZ")
+        Log.d("SinglyLinkedList DS", "Should be 8 Size: " + singleLinkedList.size())
+        Log.d("SinglyLinkedList DS", "ZZZ DOES CONTAIN IN: " + singleLinkedList.contains("ZZZ"))
+        Log.d("SinglyLinkedList DS", "ZZZ DOES CONTAIN INDEX: " + singleLinkedList.indexOf("ZZZ"))
+        Log.d("SinglyLinkedList DS", "B DOES CONTAIN INDEX: " + singleLinkedList.indexOf("B"))
+
+        singleLinkedList.remove("B")
+        Log.d("SinglyLinkedList DS", "B DOES NOT CONTAIN INDEX: " + singleLinkedList.indexOf("B"))
+        Log.d("SinglyLinkedList DS", "C SHOULD BE 1 INDEX: " + singleLinkedList.indexOf("C"))
+
+        singleLinkedList.removeFirst()
+        singleLinkedList.removeLast()
+        Log.d("SinglyLinkedList DS", "C SHOULD BE 0 INDEX: " + singleLinkedList.indexOf("C"))
+        Log.d(
+            "SinglyLinkedList DS",
+            "zzz SHOULD BE SAME AS SIZE:" + singleLinkedList.size() + " INDEX: " + singleLinkedList.indexOf(
+                "C"
+            )
+        )
+
+        singleLinkedList.clear()
+        Log.d("SinglyLinkedList DS", "Should be Empty isEmpty: " + singleLinkedList.isEmpty())
+
+
+        // Doubly Linked List
+        // Doubly Linked List
+        // Doubly Linked List
+        // Doubly Linked List
+        // Doubly Linked List
+        // Doubly Linked List
+        val linkedList: DoublyLinkedList<Int> = DoublyLinkedList<Int>()
+        Log.d("DoublyLinkedList DS", "Should be Empty Size: " + linkedList.size())
+        Log.d("DoublyLinkedList DS", "Should be Empty isEmpty: " + linkedList.isEmpty())
+        linkedList.add(10)
+        Log.d("DoublyLinkedList DS", "Should be 1 Size: " + linkedList.size())
+        Log.d("DoublyLinkedList DS", "Should be NOT Empty isEmpty: " + linkedList.isEmpty())
+
+        linkedList.add(20)
+        linkedList.add(30)
+        linkedList.add(40)
+        linkedList.add(50)
+
+        Log.d("DoublyLinkedList DS", "Should be Index #0 = 10: " + linkedList.indexOf(10))
+        Log.d("DoublyLinkedList DS", "Should be Index #2 isEmpty: " + linkedList.indexOf(30))
+
+        linkedList.addFirst(0)
+        Log.d("DoublyLinkedList DS", "Should be Index #0 = 10 : " + linkedList.indexOf(0))
+
+        Log.d("DoublyLinkedList DS", "Should be Size of 6 : " + linkedList.size())
+        Log.d("DoublyLinkedList DS", "Should be Last Index = 50 : " + linkedList.indexOf(50))
+        linkedList.addLast(100)
+        Log.d("DoublyLinkedList DS", "Should be Size of 7 : " + linkedList.size())
+        Log.d("DoublyLinkedList DS", "Should be Last Index = 100 : " + linkedList.indexOf(100))
+
+
+        linkedList.removeLast()
+        Log.d("DoublyLinkedList DS", "Should be not be found = -1 : " + linkedList.indexOf(100))
+        Log.d("DoublyLinkedList DS", "Should be Size of 6 : " + linkedList.size())
+
+        linkedList.remove(40)
+        Log.d("DoublyLinkedList DS", "Should be be index #4 = : " + linkedList.indexOf(50))
+        Log.d("DoublyLinkedList DS", "Should be Size of 5 : " + linkedList.size())
+
+
+        Log.d("DoublyLinkedList DS", "Should be NOT Empty isEmpty: " + linkedList.isEmpty())
+        linkedList.clear()
+        Log.d("DoublyLinkedList DS", "Should be Empty Size: " + linkedList.size())
+        Log.d("DoublyLinkedList DS", "Should be Empty isEmpty: " + linkedList.isEmpty())
+
+
+        // Stack
+        // Stack
+        // Stack
+        // Stack
+        // Stack
+        // Stack
+        // Stack
+        val stack: Stack<Int> = Stack()
+        Log.d("Stack DS", "Should be Empty Size: " + stack.size())
+        Log.d("Stack DS", "Should be Empty isEmpty: " + stack.isEmpty())
+
+        stack.push(0)
+        stack.push(1)
+        stack.push(2)
+        stack.push(3)
+        stack.push(4)
+        Log.d("Stack DS", "Should be 5 Size: " + stack.size())
+        Log.d("Stack DS", "Stack Peek: " + stack.peek())
+
+        stack.pop()
+        Log.d("Stack DS", "Stack Peek: " + stack.peek())
+        Log.d("Stack DS", "Should be 4 Size: " + stack.size())
+        Log.d("Stack DS", "Should be NOT Empty isEmpty: " + stack.isEmpty())
+
+
+        stack.clear()
+        Log.d("Stack DS", "Should be Empty Size: " + stack.size())
+        Log.d("Stack DS", "Should be Empty isEmpty: " + stack.isEmpty())
+
+
+        // BST Tree
+        // BST Tree
+        // BST Tree
+        // BST Tree
+        // BST Tree
+        // BST Tree
+        val bst2: BinarySearchTree<Int> = BinarySearchTree<Int>()
+
+        //              46
+        //          30       73
+        //      15    40   60   80
+        bst2.insert(46)
+        bst2.insert(30)
+        bst2.insert(15)
+        bst2.insert(40)
+        bst2.insert(73)
+        bst2.insert(60)
+        bst2.insert(80)
+
+        val z1 = bst2.contains(30)
+        val z2 = bst2.contains(80)
+        val z3 = bst2.contains(8000)
+        val x = bst2.remove(63)
+
+        val y = bst2.remove(15)
+
+
+        bst2.toString()
+
+
+        val bst: BinarySearchTree<Int> = BinarySearchTree<Int>()
+        bst.insert(46)
+        bst.insert(30)
+        bst.insert(15)
+        bst.insert(40)
+        bst.insert(73)
+        bst.insert(60)
+        bst.insert(80)
+
+        val y2 = bst.remove(73)
+        val y3 = bst.remove(40)
+        val y4 = bst.remove(30)
+
+
+        bst.toString()
+
+
+        val depth: DepthFirstSearch = DepthFirstSearch()
+        val value = depth.dpsPreOrder()
+
+
+        val value2 = depth.dpsPostOrder()
+
+        val z12 = bst2.contains(30)
+
+
+        // Max Binary Heap
+        // Max Binary Heap
+        // Max Binary Heap
+        // Max Binary Heap
+        // Max Binary Heap
+        // Max Binary Heap
+
+        val maxHeap: MaxBinaryHeap<Int> = MaxBinaryHeap()
+
+        maxHeap.insert(41)
+        maxHeap.insert(39)
+        maxHeap.insert(33)
+        maxHeap.insert(18)
+        maxHeap.insert(27)
+        maxHeap.insert(12)
+        //   maxHeap.insert(55)
+
+        Log.d("Max Binary Heap", maxHeap.toString())
+
+        maxHeap.insert(40)
+        Log.d("Max Binary Heap", maxHeap.toString())
+        maxHeap.insert(20)
+        Log.d("Max Binary Heap", maxHeap.toString())
+        maxHeap.insert(100)
+        Log.d("Max Binary Heap", maxHeap.toString())
+
+        maxHeap.removeMax()
+        Log.d("Max Binary Heap", maxHeap.toString())
+        maxHeap.removeMax()
+        Log.d("Max Binary Heap", maxHeap.toString())
+        maxHeap.removeMax()
+        Log.d("Max Binary Heap", maxHeap.toString())
+        maxHeap.removeMax()
+        Log.d("Max Binary Heap", maxHeap.toString())
+        maxHeap.removeMax()
+        Log.d("Max Binary Heap", maxHeap.toString())
+        maxHeap.removeMax()
+        Log.d("Max Binary Heap", maxHeap.toString())
+        maxHeap.removeMax()
+        Log.d("Max Binary Heap", maxHeap.toString())
+        maxHeap.removeMax()
+        Log.d("Max Binary Heap", maxHeap.toString())
+        maxHeap.removeMax()
+        Log.d("Max Binary Heap", maxHeap.toString())
+        maxHeap.removeMax()
+        Log.d("Max Binary Heap", maxHeap.toString())
+        maxHeap.removeMax()
+        Log.d("Max Binary Heap", maxHeap.toString())
+
+
+        // Priority Queue made with Min Binary Heap
+        // Priority Queue made with Min Binary Heap
+        // Priority Queue made with Min Binary Heap
+        // Priority Queue made with Min Binary Heap
+        // Priority Queue made with Min Binary Heap
+        // Priority Queue made with Min Binary Heap
+
+        val priorityQueue: PriorityQueue<String> = PriorityQueue<String>()
+
+        priorityQueue.enqueue("Cold", 8)
+        priorityQueue.enqueue("Shot in the head", 0)
+        priorityQueue.enqueue("Braindamage", 1)
+        priorityQueue.enqueue("Corona", 4)
+        priorityQueue.enqueue("Frostbite", 2)
+        priorityQueue.enqueue("Alzahimar", 11)
+        priorityQueue.enqueue("Cancer", 3)
+        Log.d("Priority Queue", priorityQueue.toString())
+
+
+        Log.d("Priority Queue", priorityQueue.toString())
+        Log.d("Priority Queue Removed:", priorityQueue.dequeue().toString())
+        Log.d("Priority Queue", priorityQueue.toString())
+        Log.d("Priority Queue", "---------------------------------------------------")
+
+        Log.d("Priority Queue", priorityQueue.toString())
+        Log.d("Priority Queue Removed:", priorityQueue.dequeue().toString())
+        Log.d("Priority Queue", priorityQueue.toString())
+        Log.d("Priority Queue", "---------------------------------------------------")
+
+        Log.d("Priority Queue", priorityQueue.toString())
+        Log.d("Priority Queue Removed:", priorityQueue.dequeue().toString())
+        Log.d("Priority Queue", priorityQueue.toString())
+        Log.d("Priority Queue", "---------------------------------------------------")
+
+        Log.d("Priority Queue", priorityQueue.toString())
+        Log.d("Priority Queue Removed:", priorityQueue.dequeue().toString())
+        Log.d("Priority Queue", priorityQueue.toString())
+        Log.d("Priority Queue", "---------------------------------------------------")
+
+        Log.d("Priority Queue", priorityQueue.toString())
+        Log.d("Priority Queue Removed:", priorityQueue.dequeue().toString())
+        Log.d("Priority Queue", priorityQueue.toString())
+        Log.d("Priority Queue", "---------------------------------------------------")
+
+        Log.d("Priority Queue", priorityQueue.toString())
+        Log.d("Priority Queue Removed:", priorityQueue.dequeue().toString())
+        Log.d("Priority Queue", priorityQueue.toString())
+        Log.d("Priority Queue", "---------------------------------------------------")
+
+        Log.d("Priority Queue", priorityQueue.toString())
+        Log.d("Priority Queue Removed:", priorityQueue.dequeue().toString())
+        Log.d("Priority Queue", priorityQueue.toString())
+        Log.d("Priority Queue", "---------------------------------------------------")
+
+        Log.d("Priority Queue", priorityQueue.toString())
+        Log.d("Priority Queue Removed:", priorityQueue.dequeue().toString())
+        Log.d("Priority Queue", priorityQueue.toString())
+        Log.d("Priority Queue", "---------------------------------------------------")
+
+
+        // Graph
+        // Graph
+        // Graph
+        // Graph
+        val graph: Graph<String> = Graph()
+
+        graph.addVertex("Egypt")
+        graph.addVertex("Canada")
+        graph.addVertex("UK")
+        graph.addVertex("US")
+        graph.addVertex("France")
+        graph.addVertex("Japan")
+
+        graph.addEdge("Egypt", "Canada")
+        graph.addEdge("Egypt", "France")
+        graph.addEdge("Egypt", "Japan")
+        graph.addEdge("UK", "France")
+        graph.addEdge("UK", "Canada")
+        graph.addEdge("US", "Canada")
+        graph.addEdge("US", "Japan")
+
+        Log.d("Graph", graph.toString())
+        graph.removeEdge("Egypt", "Canada")
+        Log.d("Graph", graph.toString())
+        graph.removeEdge("UK", "France")
+        Log.d("Graph", graph.toString())
+        graph.removeVertex("US")
+        Log.d("Graph", graph.toString())
+
+
+        val g: Graph<String> = Graph()
+
+        g.addVertex("A")
+        g.addVertex("B")
+        g.addVertex("C")
+        g.addVertex("D")
+        g.addVertex("E")
+        g.addVertex("F")
+
+
+        g.addEdge("A", "B")
+        g.addEdge("A", "C")
+        g.addEdge("B", "D")
+        g.addEdge("C", "E")
+        g.addEdge("D", "E")
+        g.addEdge("D", "F")
+        g.addEdge("E", "F")
+
+        Log.d("GRAPH BFS Traverse!!!:", g.breadthFirstTraverse("A").toString())
+        Log.d("GRAPH DFS Traverse!!!:", g.depthFirstTraverse("A").toString())
+
+
+        // MAP
+        // MAP
+        // MAP
+        // MAP
+        // MAP
+        // MAP
+
+        val map = MapWithSeparateChaining<String, Boolean>()
+
+        Log.d("Map", "Size of Map" + map.size())
+        map.put("Element #1", true)
+        Log.d("Map", "Size of Map" + map.size())
+        map.put("Element #2", true)
+        map.put("Element #3", true)
+        Log.d("Map", "Size of Map" + map.size())
+        map.remove("Element #1")
+        Log.d("Map", "Size of Map" + map.size())
+        map.clear()
+        Log.d("Map", "Size of Map" + map.size())
+        map.put("Element #1", true)
+        map.put("Element #2", true)
+        map.put("Element #3", true)
+        map.put("Element #4", false)
+        map.put("Element #5", true)
+
+        Log.d(
+            "Map", "Element should be F: " + map.get("Element #4")
+        )
+        Log.d(
+            "Map", "Element should be T: " + map.get("Element #5")
+        )
+
+        Log.d("Map", "Element Exists T: " + map.containsKey("Element #5"))
+        Log.d("Map", "Element Exists T: " + map.hasKey("Element #5"))
+        Log.d("Map", "Element Exists FFF" + map.containsKey("Element #6"))
+        Log.d("Map", "Element Exists FFF" + map.hasKey("Element #6"))
+
+
+        map.clear()
+
+        map.put("Element #1", true)
+        map.put("Element #2", true)
+        map.put("Element #3", true)
+        map.put("Element #4", false)
+        for(result in map.values())
+        {
+            Log.d("Map", "Map Loop Values: $result")
+        }
+
+        for(keys in map.keys())
+        {
+            Log.d("Map", "Map Loop Keys: $keys")
+        }
+
+        map.clear()
+        Log.d("Map", "Size of Map" + map.size())
